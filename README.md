@@ -1,7 +1,5 @@
 # Workflow
 
-[![codecov](https://codecov.io/gh/LookFintech/workflow/graph/badge.svg?token=YKTNSJ4TJ4)](https://codecov.io/gh/LookFintech/workflow)
-
 ## Getting started
 
 First add the repository to your composer.json:
