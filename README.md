@@ -3,6 +3,53 @@
 > [!WARNING]
 > This is a prototype only and is not ready for production use.
 
+## Overview
+
+Workflow is a framework-agnostic workflow orchestration system with a pluggable driver architecture. It lets you define multi-step execution flows as composable graphs of steps connected by conditional links, then run them on different execution backends without changing your workflow definitions.
+
+### Core concepts
+
+| Concept | Description |
+|---------|-------------|
+| **Workflow** | A container that holds steps and links, defining the complete execution graph |
+| **Step** | An individual unit of work — each step type handles a specific concern |
+| **Link** | A connection between steps that determines execution flow, with optional conditions |
+| **Port** | Named input/output points on a step, allowing branching and merging |
+| **Driver** | A pluggable execution engine that runs the workflow graph |
+
+### Built-in step types
+
+- **Data** — Set or transform workflow data
+- **Conditional** — Branch execution based on expressions
+- **Filter** — Filter collections of data
+- **Loop** — Iterate over data sets
+- **Process** — Execute sub-workflows
+- **Rule** — Apply rule-based logic
+- **Lambda** — Run inline closures
+
+### Execution drivers
+
+- **Sync** — Runs workflows synchronously in-process (ships with Core)
+- **Temporal** — Distributed, durable execution via [Temporal](https://temporal.io)
+- **Laravel Workflow** — Queue-based execution via [Laravel Workflow](https://github.com/laravel-workflow/laravel-workflow)
+
+### Integrations
+
+The codebase follows a "super package" pattern with nested packages that provide additional step types:
+
+- **AI / ML** — OpenAI, AWS Bedrock, Groq, Hugging Face
+- **Search** — Google
+- **Laravel** — HTTP, SQL, and other Laravel-specific steps
+- **V8** — JavaScript execution via the V8 engine
+
+### Key features
+
+- **Expression evaluation** — Symfony Expression Language for conditions and dynamic values
+- **Data querying** — JMESPath support for extracting and transforming data
+- **Schema validation** — YAML schemas define and validate step configuration
+- **Serializable state** — Execution state can be serialized for durable and distributed drivers
+- **Determinism tracking** — Steps are marked deterministic or non-deterministic for replay compatibility
+
 ## Getting started
 
 First add the repository to your composer.json:
