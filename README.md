@@ -6,9 +6,9 @@ First add the repository to your composer.json:
 
 ```
 "repositories": {
-    "looksystems-workflow": {
+    "look-workflow": {
         "type": "vcs",
-        "url": "https://github.com/LookFintech/workflow.git"
+        "url": "https://github.com/looksystems/workflow.git"
     }
 }
 ```
