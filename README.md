@@ -1,5 +1,8 @@
 # Workflow
 
+> [!WARNING]
+> This is a prototype only and is not ready for production use.
+
 ## Getting started
 
 First add the repository to your composer.json:
