@@ -38,6 +38,7 @@ Workflow is a framework-agnostic workflow orchestration system with a pluggable 
 The codebase follows a "super package" pattern with nested packages that provide additional step types:
 
 - **AI / ML** — OpenAI, AWS Bedrock, Groq, Hugging Face
+- **CLI** — Python and Node support via cli process
 - **Search** — Google
 - **Laravel** — HTTP, SQL, and other Laravel-specific steps
 - **V8** — JavaScript execution via the V8 engine
