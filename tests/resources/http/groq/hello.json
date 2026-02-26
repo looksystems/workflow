@@ -1,0 +1,29 @@
+{
+    "id": "chatcmpl-99b8ac37-3af7-43ea-8735-b74827dc5946",
+    "object": "chat.completion",
+    "created": 1723304058,
+    "model": "mixtral-8x7b-32768",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Hello! It's nice to meet you. How can I help you today? Is there a specific topic you would like to discuss related to programming or software development? I'm here to answer your questions to the best of my ability. Let me know if there's anything I can do to assist you. I'm here to help!"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 12,
+        "prompt_time": 0.001960034,
+        "completion_tokens": 72,
+        "completion_time": 0.11483279,
+        "total_tokens": 84,
+        "total_time": 0.116792824
+    },
+    "system_fingerprint": "fp_c5f20b5bb1",
+    "x_groq": {
+        "id": "req_01j4yet73kfk7szbycyrhdj4x5"
+    }
+}

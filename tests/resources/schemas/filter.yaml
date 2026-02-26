@@ -1,0 +1,6 @@
+name: "filter"
+
+fields:
+  condition:
+    type: "expression"
+    required: true

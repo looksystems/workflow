@@ -1,0 +1,28 @@
+{
+    "name": "looksystems/workflow-v8",
+    "version": "0.0.1",
+    "description": "Javascript workflows",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-v8js": "*",
+        "chenos/v8js-module-loader": "^0.4.0",
+        "looksystems/workflow-core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Look\\Workflows\\Core\\V8\\": "./"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

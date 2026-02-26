@@ -1,0 +1,27 @@
+{
+    "name": "looksystems/workflow-openai",
+    "version": "0.0.1",
+    "description": "OpenAI workflows",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "looksystems/workflow-core": "@dev",
+        "openai-php/client": "^0.8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Look\\Workflows\\OpenAI\\": "./"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

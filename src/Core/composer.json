@@ -1,0 +1,38 @@
+{
+    "name": "looksystems/workflow-core",
+    "version": "0.0.1",
+    "description": "Workflow core library",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "archtechx/enums": "^1.0",
+        "beberlei/assert": "^3.3",
+        "illuminate/collections": "^11",
+        "laravel/serializable-closure": "^1.3",
+        "mtdowling/jmespath.php": "^2.7",
+        "psr/container": "^2.0",
+        "psr/log": "^3.0",
+        "ramsey/uuid": "^4.7",
+        "symfony/expression-language": "^7.1",
+        "symfony/yaml": "^7.1"
+    },
+    "autoload": {
+        "files": [
+            "./helpers.php"
+        ],
+        "psr-4": {
+            "Look\\Workflows\\Core\\": "./"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

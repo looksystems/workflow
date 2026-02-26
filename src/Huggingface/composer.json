@@ -1,0 +1,27 @@
+{
+    "name": "looksystems/workflow-huggingface",
+    "version": "0.0.1",
+    "description": "Huggingface workflows",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "looksystems/workflow-core": "@dev",
+        "kambo/huggingface-php": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Look\\Workflows\\Huggingface\\": "./"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

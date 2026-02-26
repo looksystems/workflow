@@ -1,0 +1,14 @@
+name: "conditional"
+
+fields:
+  conditions:
+    type: array
+    fields:
+      port:
+        type: string
+        required: true
+      condition:
+        type: expression
+        required: true
+  default:
+    type: string

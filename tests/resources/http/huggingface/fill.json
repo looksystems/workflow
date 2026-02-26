@@ -1,0 +1,32 @@
+[
+    {
+        "score": 0.1537376344203949,
+        "token": 4242,
+        "token_str": "unknown",
+        "sequence": "the answer to the universe is unknown."
+    },
+    {
+        "score": 0.01927444152534008,
+        "token": 23077,
+        "token_str": "entropy",
+        "sequence": "the answer to the universe is entropy."
+    },
+    {
+        "score": 0.016537245362997055,
+        "token": 10709,
+        "token_str": "infinite",
+        "sequence": "the answer to the universe is infinite."
+    },
+    {
+        "score": 0.015316959470510483,
+        "token": 5717,
+        "token_str": "zero",
+        "sequence": "the answer to the universe is zero."
+    },
+    {
+        "score": 0.013508901931345463,
+        "token": 15579,
+        "token_str": "infinity",
+        "sequence": "the answer to the universe is infinity."
+    }
+]

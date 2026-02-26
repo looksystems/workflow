@@ -1,0 +1,27 @@
+{
+    "name": "looksystems/workflow-aws",
+    "version": "0.0.1",
+    "description": "Aws Workflows",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "looksystems/workflow-core": "@dev",
+        "aws/aws-sdk-php": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Look\\Workflows\\Aws\\": "./"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

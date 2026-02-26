@@ -1,0 +1,1 @@
+PHP.output({ message: 'hello '+PHP.data.name });

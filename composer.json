@@ -1,0 +1,136 @@
+{
+    "name": "looksystems/workflow",
+    "version": "0.0.1",
+    "description": "Workflow library",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "archtechx/enums": "^1.0",
+        "beberlei/assert": "^3.3",
+        "illuminate/collections": "^11",
+        "laravel/serializable-closure": "^1.3",
+        "mtdowling/jmespath.php": "^2.7",
+        "psr/container": "^2.0",
+        "psr/http-message": "^1.1",
+        "psr/log": "^3.0",
+        "ramsey/uuid": "^4.7",
+        "symfony/expression-language": "^7.1",
+        "symfony/yaml": "^7.1"
+    },
+    "require-dev": {
+        "aws/aws-sdk-php": "^3",
+        "chenos/v8js-module-loader": "^0.4.0",
+        "google/apiclient": "^2.15.0",
+        "illuminate/database": "^11",
+        "illuminate/http": "^11",
+        "illuminate/support": "^11",
+        "kambo/huggingface-php": "^0.1.0",
+        "laravel-workflow/laravel-workflow": "^1.0",
+        "laravel/pint": "^1",
+        "lucianotonet/groq-php": "^0.0.4",
+        "mockery/mockery": "^1.6",
+        "nyholm/psr7": "^1.8",
+        "openai-php/client": "^0.8.5",
+        "orchestra/testbench": "^9.2",
+        "pestphp/pest": "^2",
+        "phpstan/phpstan": "^1.11",
+        "symfony/http-client": "^7.1",
+        "symfony/process": "^7.1",
+        "temporal/sdk": "^2.14"
+    },
+    "suggest": {
+        "aws/aws-sdk-php": "^3",
+        "chenos/v8js-module-loader": "^0.4.0",
+        "google/apiclient": "^2.15.0",
+        "kambo/huggingface-php": "^0.1.0",
+        "illuminate/database": "^11",
+        "illuminate/http": "^11",
+        "illuminate/support": "^11",
+        "laravel-workflow/laravel-workflow": "^1.0",
+        "lucianotonet/groq-php": "^0.0.4",
+        "openai-php/client": "^0.8.5",
+        "symfony/process": "^7.0",
+        "temporal/sdk": "^2.14"
+    },
+    "replaces": {
+        "looksystems/workflow-core": "self.version",
+        "looksystems/workflow-driver-laravel": "self.version",
+        "looksystems/workflow-driver-temporal": "self.version",
+        "looksystems/workflow-google": "self.version",
+        "looksystems/workflow-groq": "self.version",
+        "looksystems/workflow-huggingface": "self.version",
+        "looksystems/workflow-laravel": "self.version",
+        "looksystems/workflow-openai": "self.version",
+        "looksystems/workflow-v8": "self.version"
+    },
+    "autoload": {
+        "files": [
+            "src/Core/helpers.php"
+        ],
+        "psr-4": {
+            "Look\\Workflows\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "analyse": "@php ./vendor/bin/phpstan analyse",
+        "csfix": "@php ./vendor/bin/pint",
+        "debug": "@php ./vendor/bin/pest --debug",
+        "docs": "phpdoc --directory=src --target=docs/api",
+        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage",
+        "coverage-html": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --coverage-html=docs/coverage",
+        "coverage-xml": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --coverage-clover=docs/coverage/coverage.xml",
+        "filter": ".@php  /vendor/bin/pest --filter",
+        "pint": "@php ./vendor/bin/pint",
+        "test": "@php ./vendor/bin/pest --stop-on-failure",
+        "tests": "@php ./vendor/bin/pest",
+        "testbench": "@php vendor/bin/testbench",
+        "testbench-clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "testbench-prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "testbench-build": [
+            "@php vendor/bin/testbench package:create-sqlite-db",
+            "@php vendor/bin/testbench vendor:publish --force --ansi --no-interaction --provider='Workflow\\Providers\\WorkflowServiceProvider' --tag='migrations'",
+            "@php vendor/bin/testbench migrate --ansi --no-interaction",
+            "@php vendor/bin/testbench workbench:build --ansi"
+        ],
+        "testbench-serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "post-autoload-dump": [
+            "@testbench-clear",
+            "@testbench-prepare",
+            "@testbench-build"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "CustomSearchAPI"
+        ],
+        "laravel": {
+            "providers": [
+                "Look\\Workflows\\Laravel\\WorkflowServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

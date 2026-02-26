@@ -1,0 +1,10 @@
+/docs/api
+/docs/coverage
+/phpunit.xml
+/phpunit.local.xml
+.DS_Store
+.phpdoc
+.phpintel
+.idea
+composer.lock
+vendor

@@ -1,0 +1,6 @@
+name: "data"
+
+fields:
+  data:
+    type: "json"
+    required: true

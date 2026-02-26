@@ -1,0 +1,32 @@
+{
+    "name": "looksystems/workflow-google",
+    "version": "0.0.1",
+    "description": "Google Workflows",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "looksystems/workflow-core": "@dev",
+        "google/apiclient": "^2.15.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Look\\Workflows\\Google\\": "./"
+        }
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "CustomSearchAPI"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

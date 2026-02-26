@@ -1,0 +1,35 @@
+{
+    "name": "looksystems/workflow-laravel",
+    "version": "0.0.1",
+    "description": "Workflows for Laravel",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adrian Keeling-Look",
+            "email": "adrian@looksystems.ltd.uk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "looksystems/workflow-core": "@dev",
+        "illuminate/database": "^11",
+        "illuminate/support": "^11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Look\\Workflows\\Laravel\\": "./"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Look\\Workflows\\Laravel\\WorkflowServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
